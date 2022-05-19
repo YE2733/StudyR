@@ -167,38 +167,16 @@ cor(df$Temp,df$Ozone)
 # 선그래프
 df.7 <- subset(df, Month==7)
 df.7
+
 ggplot(data=df.7, aes(x=Day, y=Ozone))+
-  geom_line(col='red', linetype='deshed')+ 
-  geom_point(col='orange', size=3)+
+  geom_line(col='red', linetype='dashed')+
+  geom_point(col='orange', size=3)+ 
   ggtitle('일별 오존지수')+
   theme(plot.title = element_text(size = 16, 
                                   face = 'bold',
                                   color = 'darkred',
                                   hjust = 0.5))+
   labs(x = '일', y = '오존지수')
-
-#다시 확인
-df.7 <- subset(df,Month==7)
-df.7
-ggplot(data = df.7, aes(x=Day,y=Ozone)) +
-  geom_line(col='red', linetype='dashed') +
-  geom_point(col='orange', size=3) +
-  ggtitle('일별오존지수')
-theme(plot.title = 
-        element_text(size=16,
-                     face='bold',
-                     color='darkred',
-                     hjust = 0.5)) + 
-  labs(x='일', y='오존지수'
-
-
-
-
-
-
-
-
-
 
 # 실전분석. 세계 각국의 다양한 지표 분석
 data(UN98)
